@@ -26,9 +26,9 @@ else
 end
 
 vscode.normal = {
-    b = { fg = colors.blue, bg = colors.bg2 },
+    b = { fg = colors.blue, bg = 'NONE' },
     a = { fg = vim.o.background == 'dark' and colors.fg or colors.bg, bg = colors.blue, gui = 'bold' },
-    c = { fg = colors.fg, bg = colors.bg },
+    c = { fg = colors.fg, bg = 'NONE' },
 }
 
 vscode.visual = {
