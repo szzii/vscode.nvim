@@ -31,7 +31,7 @@ vscode.setup = function(user_opts)
         opts.color_overrides.vscBack = 'NONE'
     end
 
-    vim.cmd('hi clear')
+    --vim.cmd('hi clear')
     if vim.fn.exists('syntax_on') then
         vim.cmd('syntax reset')
     end
