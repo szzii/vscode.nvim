@@ -26,37 +26,37 @@ else
 end
 
 vscode.normal = {
-		b = { fg = colors.blue, bg = 'NONE' },
-		a = { fg = vim.o.background == 'dark' and colors.fg or colors.bg, bg = colors.blue, gui = 'bold' },
-		c = { fg = colors.fg, bg = 'NONE' },
+	b = { fg = colors.blue, bg = 'NONE' },
+	a = { fg = vim.o.background == 'dark' and colors.fg or colors.bg, bg = colors.blue, gui = 'bold' },
+	c = { fg = colors.fg, bg = 'NONE' },
 }
 
 vscode.visual = {
-		a = { fg = colors.bg, bg = colors.yellow, gui = 'bold' },
-		b = { fg = colors.yellow, bg = 'NONE' },
+	a = { fg = colors.bg, bg = colors.yellow, gui = 'bold' },
+	b = { fg = colors.yellow, bg = 'NONE' },
 }
 
 vscode.inactive = {
-		b = { fg = colors.bg, bg = 'NONE' },
-		a = { fg = colors.fg, bg = colors.bg, gui = 'bold' },
+	b = { fg = colors.bg, bg = 'NONE' },
+	a = { fg = colors.fg, bg = colors.bg, gui = 'bold' },
 }
 
 vscode.replace = {
-		b = { fg = colors.red, bg = 'NONE' },
-		a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.red, gui = 'bold' },
-		c = { fg = colors.fg, bg = 'NONE' },
+	b = { fg = colors.red, bg = 'NONE' },
+	a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.red, gui = 'bold' },
+	c = { fg = colors.fg, bg = 'NONE' },
 }
 
 vscode.insert = {
-		a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.green, gui = 'bold' },
-		b = { fg = colors.green, bg = 'NONE' },
-		c = { fg = colors.fg, bg = 'NONE' },
+	a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.green, gui = 'bold' },
+	b = { fg = colors.green, bg = 'NONE' },
+	c = { fg = colors.fg, bg = 'NONE' },
 }
 
 vscode.command = {
-		b = { fg = colors.pink, bg = 'NONE' },
-		a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.pink, gui = 'bold' },
-		c = { fg = colors.fg, bg = 'NONE' },
+	b = { fg = colors.pink, bg = 'NONE' },
+	a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.pink, gui = 'bold' },
+	c = { fg = colors.fg, bg = 'NONE' },
 }
 
 return vscode
