@@ -9,8 +9,8 @@ local function get_default_group_overrides(opts)
 	c = vim.tbl_extend('force', c, opts.color_overrides or {})
 	local is_dark = vim.o.background == 'dark'
 	local overrides = {
-		Search = { fg = is_dark and c.vscBack or '#FFFFFF', bg = c.vscYellowOrange, bold = true },
-		IncSearch = { fg = is_dark and c.vscBack or '#FFFFFF', bg = c.vscBlueGreen, bold = true },
+		Search = { fg = is_dark and '#11161D' or '#FFFFFF', bg = '#F2CC60', bold = true },
+		IncSearch = { fg = is_dark and '#08141F' or '#FFFFFF', bg = '#53D1B6', bold = true },
 		CursorLine = { bg = c.vscCursorDarkDark },
 		CursorLineNr = { fg = is_dark and c.vscYellowOrange or c.vscDarkBlue, bg = 'NONE', bold = true },
 		NormalFloat = { bg = opts.transparent and 'NONE' or c.vscPopupBack },
@@ -34,9 +34,10 @@ local function get_default_group_overrides(opts)
 		WhichKeyFloat = { bg = opts.transparent and 'NONE' or c.vscPopupBack },
 		['@annotation'] = { fg = c.vscYellowOrange, bg = 'NONE', italic = true },
 		['@attribute'] = { fg = c.vscYellowOrange, bg = 'NONE', italic = true },
-		['@keyword.modifier.java'] = { link = '@keyword' },
-		['@keyword.exception.java'] = { link = '@keyword' },
-		['@keyword.type.java'] = { link = '@keyword' },
+		['@keyword.modifier'] = { fg = c.vscPink, bg = 'NONE', italic = true },
+		['@keyword.modifier.java'] = { fg = c.vscPink, bg = 'NONE', italic = true },
+		['@keyword.type.java'] = { fg = c.vscPink, bg = 'NONE', italic = true },
+		['@keyword.exception.java'] = { fg = c.vscPink, bg = 'NONE' },
 	}
 
 	if opts.transparent then
@@ -102,10 +103,10 @@ vscode.setup = function(user_opts)
 		transparent = false,
 		italic_comments = true,
 		italic_keywords = true,
-		italic_parameters = true,
+		italic_parameters = false,
 		bold_types = true,
 		bold_functions = false,
-		bold_constants = true,
+		bold_constants = false,
 		color_overrides = {},
 		group_overrides = {},
 		disable_nvimtree_bg = true,
