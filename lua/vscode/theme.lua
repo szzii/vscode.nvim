@@ -5,6 +5,7 @@ theme.set_highlights = function(opts)
 	local c = require('vscode.colors').get_colors()
 	c = vim.tbl_extend('force', c, opts['color_overrides'])
 	local isDark = vim.o.background == 'dark'
+	local variable_fg = '#FFFFFF'
 	local keyword_italic = opts.italic_keywords
 	local parameter_italic = opts.italic_parameters
 	local type_bold = opts.bold_types
@@ -58,7 +59,7 @@ theme.set_highlights = function(opts)
 	hl(0, 'Number', { fg = c.vscLightGreen, bg = 'NONE' })
 	hl(0, 'Boolean', { fg = c.vscBlue, bg = 'NONE' })
 	hl(0, 'Float', { fg = c.vscLightGreen, bg = 'NONE' })
-	hl(0, 'Identifier', { fg = c.vscFront, bg = 'NONE' })
+	hl(0, 'Identifier', { fg = variable_fg, bg = 'NONE' })
 	hl(0, 'Function', { fg = c.vscYellow, bg = 'NONE', bold = function_bold })
 	hl(0, 'Statement', { fg = c.vscPink, bg = 'NONE' })
 	hl(0, 'Conditional', { fg = c.vscPink, bg = 'NONE' })
@@ -140,7 +141,7 @@ theme.set_highlights = function(opts)
 	hl(0, '@storageClass', { fg = c.vscBlue, bg = 'NONE', bold = type_bold })
 	hl(0, '@structure', { fg = c.vscLightBlue, bg = 'NONE' })
 	hl(0, '@include', { fg = c.vscPink, bg = 'NONE' })
-	hl(0, '@variable', { fg = c.vscFront, bg = 'NONE' })
+	hl(0, '@variable', { fg = variable_fg, bg = 'NONE' })
 	hl(0, '@variable.builtin', { fg = c.vscLightBlue, bg = 'NONE', italic = true })
 	hl(0, '@variable.parameter', { fg = c.vscLightBlue, bg = 'NONE', italic = parameter_italic })
 	hl(0, '@variable.member', { fg = c.vscLightBlue, bg = 'NONE' })
